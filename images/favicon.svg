@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B2683E"/>
+      <stop offset="50%" stop-color="#9A5B36"/>
+      <stop offset="100%" stop-color="#6E381A"/>
+    </linearGradient>
+    <filter id="fcShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background Squircle -->
+  <rect width="64" height="64" rx="16" fill="url(#fcGrad)"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" fill="none" stroke="#F8F5F0" stroke-width="1.5" stroke-opacity="0.25"/>
+
+  <!-- Architectural Furniture Icon (Sofa / Lounge) -->
+  <g filter="url(#fcShadow)">
+    <!-- Backrest -->
+    <path d="M16 19 C16 16.5 18 14.5 20.5 14.5 L43.5 14.5 C46 14.5 48 16.5 48 19 L48 33 L16 33 Z" fill="#FFF9F2"/>
+    <!-- Left Armrest -->
+    <rect x="11" y="23" width="7" height="17" rx="3.5" fill="#EAE0D3"/>
+    <!-- Right Armrest -->
+    <rect x="46" y="23" width="7" height="17" rx="3.5" fill="#EAE0D3"/>
+    <!-- Main Seat Cushion -->
+    <rect x="15" y="29" width="34" height="11" rx="3.5" fill="#FFFFFF"/>
+    <!-- Cushion Divider Line -->
+    <line x1="32" y1="30" x2="32" y2="39" stroke="#E5DEC9" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Wooden Base Underframe -->
+    <rect x="14" y="40" width="36" height="3" rx="1" fill="#D99B66"/>
+    <!-- Angled Mid-Century Wooden Legs -->
+    <line x1="17" y1="43" x2="14" y2="51" stroke="#F5CBA7" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="47" y1="43" x2="50" y2="51" stroke="#F5CBA7" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="28" y1="43" x2="27" y2="50" stroke="#D99B66" stroke-width="2" stroke-linecap="round"/>
+    <line x1="36" y1="43" x2="37" y2="50" stroke="#D99B66" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

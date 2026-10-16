@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>About Us | FurniCraft Furniture Showroom & Home Decor Store</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif']
+                    },
+                    colors: {
+                        'ink-black': '#0a0a0a',
+                        'charcoal': '#141413',
+                        'teak': '#9A5B36',
+                        'teak-dark': '#7A4526',
+                        'oak-gold': '#D99B66',
+                        'espresso': '#231A15',
+                        'alabaster': '#F8F5F0',
+                        'sandstone': '#EBE4DA',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        /* ========== UNIQUE ARCHITECTURAL & BENTO HERO STYLES ========== */
+        .arch-frame {
+            border-radius: 14rem 14rem 1.75rem 1.75rem;
+            overflow: hidden;
+        }
+
+        @media (max-width: 640px) {
+            .arch-frame {
+                border-radius: 9rem 9rem 1.5rem 1.5rem;
+            }
+        }
+
+        .hero-zoom {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .hero-zoom:hover {
+            transform: scale(1.04);
+        }
+
+        /* ========== RTL COMPLETE SUPPORT ========== */
+        html[dir="rtl"] .navbar-flex {
+            flex-direction: row-reverse !important;
+        }
+
+        html[dir="rtl"] .nav-links {
+            order: 2;
+        }
+
+        html[dir="rtl"] .logo-area {
+            order: 3;
+        }
+
+        html[dir="rtl"] .controls-area {
+            order: 1;
+        }
+
+        html[dir="rtl"] .home-dropdown {
+            left: auto !important;
+            right: 0 !important;
+        }
+
+        html[dir="rtl"] .fa-arrow-right,
+        html[dir="rtl"] .fa-arrow-up-right-from-square {
+            transform: scaleX(-1);
+        }
+
+        html[dir="rtl"] .text-left,
+        html[dir="rtl"] .sm\:text-left,
+        html[dir="rtl"] .lg\:text-left {
+            text-align: right !important;
+        }
+
+        html[dir="rtl"] .space-x-1> :not([hidden])~ :not([hidden]),
+        html[dir="rtl"] .space-x-6> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 1;
+        }
+
+        html[dir="rtl"] .flex.items-center.gap-3,
+        html[dir="rtl"] .flex.items-center.gap-2 {
+            flex-direction: row-reverse;
+        }
+
+        html[dir="rtl"] .mobile-drawer {
+            right: auto;
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        html[dir="rtl"] .mobile-drawer.open {
+            transform: translateX(0);
+        }
+
+        html[dir="rtl"] .floating-card-left {
+            left: auto !important;
+            right: -1rem !important;
+        }
+
+        html[dir="rtl"] .floating-card-right {
+            right: auto !important;
+            left: -1rem !important;
+        }
+
+        /* ========== DARK MODE ========== */
+        html.dark body {
+            background-color: #0c0b0a !important;
+            color: #F8F5F0 !important;
+        }
+
+        html.dark .top-strip {
+            background-color: #161412 !important;
+            border-bottom-color: #26221E !important;
+        }
+
+        html.dark .nav-bar {
+            background-color: rgba(18, 16, 14, 0.92) !important;
+            border-bottom-color: #26221E !important;
+        }
+
+        html.dark .nav-pill-track {
+            background-color: #1A1715 !important;
+            border-color: #2E2925 !important;
+        }
+
+        html.dark .nav-text,
+        html.dark .footer-text,
+        html.dark .dropdown-item,
+        html.dark .footer-link,
+        html.dark .footer-heading,
+        html.dark p,
+        html.dark h1,
+        html.dark h2,
+        html.dark h3,
+        html.dark h4,
+        html.dark li {
+            color: #F8F5F0 !important;
+        }
+
+        html.dark .muted-text {
+            color: #B5ABA1 !important;
+        }
+
+        html.dark .btn-primary-dark {
+            background-color: #D99B66 !important;
+            color: #14110F !important;
+        }
+
+        html.dark .btn-primary-dark:hover {
+            background-color: #E5B082 !important;
+        }
+
+        html.dark .dropdown-bg {
+            background-color: #1A1715 !important;
+            border-color: #332D28 !important;
+        }
+
+        html.dark .dropdown-item:hover {
+            background-color: #28231F !important;
+        }
+
+        html.dark .surface-card {
+            background-color: #171412 !important;
+            border-color: #2B2622 !important;
+        }
+
+        html.dark .footer-dark {
+            background-color: #110F0D !important;
+            border-top-color: #26221E !important;
+        }
+
+        html.dark .mobile-menu-dark {
+            background-color: #12100E !important;
+            border-color: #28231F !important;
+        }
+
+        html.dark .mobile-menu-item {
+            background-color: #1A1715 !important;
+            border-color: #2B2622 !important;
+            color: #F8F5F0 !important;
+        }
+
+        html.dark .mobile-toggle-btn {
+            background-color: #24201C !important;
+            color: #F8F5F0 !important;
+        }
+
+        /* ========== DRAWER & OVERLAY ========== */
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 88%;
+            max-width: 390px;
+            height: 100vh;
+            z-index: 1000;
+            transform: translateX(100%);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .mobile-drawer.open {
+            transform: translateX(0);
+        }
+
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 12, 10, 0.65);
+            backdrop-filter: blur(3px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .drawer-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        body.drawer-open {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8F5F0] text-[#231A15] font-sans antialiased selection:bg-[#9A5B36] selection:text-white">
+
+    <!-- ========== TOP STUDIO ANNOUNCEMENT STRIP ========== -->
+    <div class="bg-[#EBE4DA] border-b border-[#DCD2C4] py-2 px-4 text-xs top-strip">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 font-medium text-[#5A493E] muted-text">
+                    <i class="fas fa-truck-fast text-[#9A5B36] dark:text-[#D99B66]"></i> Complimentary White-Glove Delivery & Assembly
+                </span>
+                <span class="hidden md:inline-block text-[#C5B8A8]">|</span>
+                <span class="hidden md:flex items-center gap-1.5 text-[#5A493E] muted-text">
+                    <i class="fas fa-award text-[#9A5B36] dark:text-[#D99B66]"></i> 10-Year Solid Wood Warranty
+                </span>
+            </div>
+            <div class="hidden sm:flex items-center gap-4 text-[#5A493E] muted-text">
+                <span><i class="far fa-clock mr-1 text-[#9A5B36] dark:text-[#D99B66]"></i> Showroom: Mon–Sun 10:00 AM – 8:30 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== UNIQUE FLOATING PILL-TRACK NAVBAR ========== -->
+    <nav class="bg-[#F8F5F0]/90 backdrop-blur-md sticky top-0 z-50 w-full border-b border-[#E2D9CC] nav-bar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="navbar-flex flex justify-between items-center h-20">
+
+                <!-- Architectural Emblem Logo -->
+                <a href="index.html" class="logo-area flex-shrink-0 flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-[#9A5B36] dark:bg-[#D99B66] flex items-center justify-center text-white dark:text-[#14110F] shadow-md group-hover:rounded-xl transition-all">
+                        <i class="fas fa-couch text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-2xl font-bold tracking-tight text-[#231A15] dark:text-[#F8F5F0] leading-none">
+                            FurniCraft
+                        </span>
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-[#9A5B36] dark:text-[#D99B6A] font-semibold mt-1">
+                            Home & Decor Studio
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Center Pill Track Navigation Links (Exact Buttons & Redirects Preserved) -->
+                <div class="nav-links hidden xl:flex items-center bg-[#EFE9E0] border border-[#DFD5C7] rounded-full px-3 py-1.5 space-x-1 nav-pill-track shadow-inner">
+                    <div class="relative group">
+                        <a href="#" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition flex items-center gap-1.5 nav-text">
+                            Home <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+                        </a>
+                        <div class="home-dropdown absolute left-0 mt-3 w-44 bg-white rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50 border border-[#DFD5C7] overflow-hidden dropdown-bg p-1.5">
+                            <a href="index.html" class="block px-3.5 py-2 rounded-xl text-sm hover:bg-[#F8F5F0] transition flex items-center justify-between dropdown-item">
+                                <span>Home 1</span>
+                                <i class="fas fa-arrow-right text-[10px] opacity-50"></i>
+                            </a>
+                            <a href="home2.html" class="block px-3.5 py-2 rounded-xl text-sm hover:bg-[#F8F5F0] transition flex items-center justify-between mt-1 dropdown-item">
+                                <span>Home 2</span>
+                                <i class="fas fa-arrow-right text-[10px] opacity-50"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a href="about.html" class="px-3.5 py-1.5 rounded-full bg-white dark:bg-[#28231F] text-[#9A5B36] dark:text-[#D99B66] font-semibold text-sm shadow-sm transition nav-text">About</a>
+                    <a href="service.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">Service</a>
+                    <a href="pricing.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">Pricing</a>
+                    <a href="booking.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">Booking</a>
+                    <a href="faq.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">FAQ</a>
+                    <a href="blog.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">Blog</a>
+                    <a href="contact.html" class="px-3.5 py-1.5 rounded-full text-[#3A2E27] font-medium text-sm hover:bg-white/70 dark:hover:bg-[#28231F] hover:text-[#9A5B36] transition nav-text">Contact</a>
+                </div>
+
+                <!-- Right Controls Capsule -->
+                <div class="controls-area hidden xl:flex items-center gap-2.5">
+                    <div class="flex items-center bg-[#EFE9E0] border border-[#DFD5C7] rounded-full p-1 nav-pill-track">
+                        <button id="darkModeToggle" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[#231A15] font-medium text-xs hover:bg-white dark:hover:bg-[#28231F] transition nav-text">
+                            <i id="darkIcon" class="fas fa-moon text-xs text-[#9A5B36] dark:text-[#D99B66]"></i>
+                            <span id="darkLabel">Dark</span>
+                        </button>
+                        <button id="rtlToggle" class="flex items-center gap-1 px-3 py-1.5 rounded-full text-[#231A15] font-semibold text-xs hover:bg-white dark:hover:bg-[#28231F] transition nav-text">
+                            <span id="rtlLabel">LTR</span>
+                        </button>
+                    </div>
+
+                    <a href="Book Appointment.html" class="flex items-center gap-2 bg-[#231A15] hover:bg-[#9A5B36] text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-md transition-all btn-primary-dark">
+                        <span>Book Appointment</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile & Tablet Action Trigger -->
+                <div class="flex items-center gap-2.5 xl:hidden">
+                    <a href="Book Appointment.html" class="hidden sm:flex items-center gap-1.5 bg-[#9A5B36] text-white px-4 py-2 rounded-full text-xs font-semibold shadow-sm btn-primary-dark">
+                        <span>Book Appointment</span>
+                    </a>
+                    <button id="mobileMenuBtn" class="w-11 h-11 rounded-2xl bg-[#EFE9E0] dark:bg-[#1E1A17] border border-[#DFD5C7] dark:border-[#2E2925] flex items-center justify-center text-[#231A15] nav-text focus:outline-none hover:bg-[#9A5B36] hover:text-white transition">
+                        <i class="fas fa-bars-staggered text-lg"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== UNIQUE BOUTIQUE CATALOG HAMBURGER DRAWER ========== -->
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+    <div id="mobileDrawer" class="mobile-drawer bg-[#F8F5F0] border-l border-[#DFD5C7] mobile-menu-dark">
+        <div class="flex flex-col h-full justify-between">
+            <!-- Drawer Top Header -->
+            <div class="p-5 border-b border-[#E2D9CC] dark:border-[#28231F] flex justify-between items-center bg-[#EFE9E0]/60 dark:bg-[#161412]">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-[#9A5B36] text-white flex items-center justify-center">
+                        <i class="fas fa-couch text-sm"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-[#231A15] text-lg block leading-none nav-text">FurniCraft</span>
+                        <span class="text-[10px] uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Studio Navigation</span>
+                    </div>
+                </div>
+                <button id="closeDrawerBtn" class="w-9 h-9 rounded-xl bg-white dark:bg-[#24201C] border border-[#DFD5C7] dark:border-[#332D28] flex items-center justify-center text-[#231A15] hover:text-[#9A5B36] transition text-lg nav-text">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Card-Style Navigation List -->
+            <div class="flex-1 p-5 space-y-2.5 overflow-y-auto">
+                <div class="rounded-2xl bg-white border border-[#E5DEC9] p-3 mobile-menu-item">
+                    <div class="flex justify-between items-center font-medium text-[#231A15] nav-text">
+                        <a href="index.html" class="flex items-center gap-2.5">
+                            <span class="text-xs font-mono opacity-60">01</span>
+                            <span>Home</span>
+                        </a>
+                        <button id="drawerHomeBtn" class="w-7 h-7 rounded-lg bg-[#F8F5F0] dark:bg-[#28231F] flex items-center justify-center">
+                            <i id="drawerChevron" class="fas fa-chevron-down text-xs transition-transform"></i>
+                        </button>
+                    </div>
+                    <div id="drawerSubmenu" class="hidden mt-2.5 pt-2.5 border-t border-[#EFE9E0] dark:border-[#2B2622] space-y-1.5 pl-6">
+                        <a href="index.html" class="block py-1.5 text-sm hover:text-[#9A5B36] transition flex items-center justify-between nav-text">
+                            <span>Home 1</span>
+                            <span class="text-[10px] px-2 py-0.5 rounded-full bg-[#EFE9E0] dark:bg-[#28231F]">Main</span>
+                        </a>
+                        <a href="home2.html" class="block py-1.5 text-sm hover:text-[#9A5B36] transition flex items-center justify-between nav-text">
+                            <span>Home 2</span>
+                            <i class="fas fa-arrow-right text-[10px] opacity-50"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="about.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#9A5B36] font-bold text-[#9A5B36] dark:text-[#D99B66] transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-75">02</span><span>About</span></div>
+                    <i class="fas fa-circle text-[6px]"></i>
+                </a>
+                <a href="service.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">03</span><span>Service</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+                <a href="pricing.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">04</span><span>Pricing</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+                <a href="booking.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">05</span><span>Booking</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+                <a href="faq.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">06</span><span>FAQ</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+                <a href="blog.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">07</span><span>Blog</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+                <a href="contact.html" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-white border border-[#E5DEC9] hover:border-[#9A5B36] font-medium transition nav-text mobile-menu-item">
+                    <div class="flex items-center gap-2.5"><span class="text-xs font-mono opacity-50">08</span><span>Contact</span></div>
+                    <i class="fas fa-arrow-right text-xs opacity-40"></i>
+                </a>
+            </div>
+
+            <!-- Drawer Bottom Controls & CTA -->
+            <div class="p-5 border-t border-[#E2D9CC] dark:border-[#28231F] bg-[#EFE9E0]/60 dark:bg-[#161412] space-y-3">
+                <a href="Book Appointment.html" class="w-full flex items-center justify-center gap-2 bg-[#9A5B36] text-white py-3 px-4 rounded-2xl font-semibold text-sm shadow-md hover:bg-[#7A4526] transition btn-primary-dark">
+                    <i class="far fa-calendar-check"></i>
+                    <span>Book Appointment</span>
+                </a>
+                <div class="grid grid-cols-2 gap-2.5">
+                    <button id="drawerDarkToggle" class="flex items-center justify-center gap-2 bg-white border border-[#DFD5C7] dark:border-[#332D28] px-3 py-2.5 rounded-xl text-xs font-semibold transition mobile-toggle-btn">
+                        <i id="drawerDarkIcon" class="fas fa-moon text-xs text-[#9A5B36] dark:text-[#D99B66]"></i>
+                        <span id="drawerDarkLabel">Dark</span>
+                    </button>
+                    <button id="drawerRtlToggle" class="flex items-center justify-center gap-2 bg-white border border-[#DFD5C7] dark:border-[#332D28] px-3 py-2.5 rounded-xl text-xs font-semibold transition mobile-toggle-btn">
+                        <i class="fas fa-right-left text-xs text-[#9A5B36] dark:text-[#D99B66]"></i>
+                        <span id="drawerRtlLabel">LTR</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== ABOUT PAGE HERO SECTION ========== -->
+    <section class="relative overflow-hidden py-10 sm:py-14 lg:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+
+                <!-- Left Column: About Studio Heritage & Craftsmanship Story (7 Cols) -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+
+                    <!-- Studio Heritage Pill -->
+                    <div class="inline-flex items-center gap-2.5 bg-white dark:bg-[#171412] px-4 py-2 rounded-full border border-[#DFD5C7] dark:border-[#2B2622] shadow-sm surface-card">
+                        <span class="w-2 h-2 rounded-full bg-[#9A5B36] animate-ping"></span>
+                        <span class="text-xs font-bold uppercase tracking-[0.18em] text-[#9A5B36] dark:text-[#D99B66]">
+                            Our Heritage & Woodworking Guild • Est. 2010
+                        </span>
+                    </div>
+
+                    <!-- Editorial Mixed-Font Headline -->
+                    <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold text-[#231A15] dark:text-[#F8F5F0] leading-[1.12] tracking-tight">
+                        Crafting Future <span class="font-serif italic font-normal text-[#9A5B36] dark:text-[#D99B66]">Heirlooms</span> With Honest Materials.
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-[#5A493E] dark:text-[#B5ABA1] text-base sm:text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed muted-text">
+                        Born in a boutique cabinetmaking workshop, FurniCraft has grown into an architectural furniture showroom dedicated to sustainably harvested timber, traditional mortise-and-tenon joinery, and timeless interior warmth.
+                    </p>
+
+                    <!-- Action Buttons (Redirects to booking.html and service.html) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="booking.html" class="w-full sm:w-auto px-8 py-4 bg-[#9A5B36] hover:bg-[#7A4526] text-white rounded-2xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 btn-primary-dark">
+                            <span>Visit Our Flagship Studio</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="service.html" class="w-full sm:w-auto px-8 py-4 bg-white dark:bg-[#171412] border border-[#D5C7B6] dark:border-[#2B2622] text-[#231A15] rounded-2xl font-semibold hover:border-[#9A5B36] transition-all flex items-center justify-center gap-2.5 surface-card nav-text">
+                            <i class="fas fa-hammer text-[#9A5B36] dark:text-[#D99B66]"></i>
+                            <span>Our Craft & Collections</span>
+                        </a>
+                    </div>
+
+                    <!-- Bento Heritage Metrics Strip -->
+                    <div class="pt-6 grid grid-cols-3 gap-3 sm:gap-5 max-w-xl mx-auto lg:mx-0">
+                        <div class="bg-white/80 dark:bg-[#171412] border border-[#E5DEC9] dark:border-[#2B2622] rounded-2xl p-3.5 sm:p-4 text-center lg:text-left surface-card">
+                            <span class="font-serif text-2xl sm:text-3xl font-bold text-[#9A5B36] dark:text-[#D99B66] block">16+ Yrs</span>
+                            <span class="text-xs text-[#5A493E] muted-text font-medium">Bespoke Woodwork</span>
+                        </div>
+                        <div class="bg-white/80 dark:bg-[#171412] border border-[#E5DEC9] dark:border-[#2B2622] rounded-2xl p-3.5 sm:p-4 text-center lg:text-left surface-card">
+                            <span class="font-serif text-2xl sm:text-3xl font-bold text-[#9A5B36] dark:text-[#D99B66] block">38</span>
+                            <span class="text-xs text-[#5A493E] muted-text font-medium">Master Artisans</span>
+                        </div>
+                        <div class="bg-white/80 dark:bg-[#171412] border border-[#E5DEC9] dark:border-[#2B2622] rounded-2xl p-3.5 sm:p-4 text-center lg:text-left surface-card">
+                            <span class="font-serif text-2xl sm:text-3xl font-bold text-[#9A5B36] dark:text-[#D99B66] block">Zero</span>
+                            <span class="text-xs text-[#5A493E] muted-text font-medium">Veneers or synthetics</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Multi-Layered Arch & Bento Visual Composition (5 Cols) -->
+                <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+
+                        <!-- Main Tall Arch Workshop & Studio Image -->
+                        <div class="arch-frame border-4 border-white dark:border-[#24201C] shadow-2xl bg-[#EBE4DA] aspect-[4/5] relative">
+                            <img src="images/furniture (33).jpg" alt="Master Woodworker Crafting Solid Teak Furniture" class="w-full h-full object-cover hero-zoom">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-5 left-5 right-5 flex items-center justify-between text-white">
+                                <div>
+                                    <span class="text-[11px] uppercase tracking-widest text-[#E5C19B] block">Inside The Atelier</span>
+                                    <h3 class="font-serif text-lg font-semibold">Hand-Planed Teak & Black Walnut</h3>
+                                </div>
+                                <a href="contact.html" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-[#9A5B36] transition">
+                                    <i class="fas fa-arrow-right text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Top-Right Secondary Material Library Card -->
+                        <div class="floating-card-right hidden sm:flex items-center gap-3 absolute -top-6 -right-4 bg-white dark:bg-[#171412] p-3 rounded-2xl shadow-xl border border-[#E5DEC9] dark:border-[#2B2622] surface-card w-60">
+                            <img src="images/furniture (36).jpg" alt="Organic Linen & Wood Swatches" class="w-14 h-14 rounded-xl object-cover flex-shrink-0">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wider text-[#9A5B36] dark:text-[#D99B66] block">Material Library</span>
+                                <h4 class="text-xs font-bold text-[#231A15] leading-snug">80+ Belgian Linen & Timber Swatches</h4>
+                                <a href="service.html" class="text-[11px] text-[#5A493E] hover:text-[#9A5B36] font-medium inline-flex items-center gap-1 mt-0.5 muted-text">
+                                    Explore Finishes <i class="fas fa-arrow-right text-[9px]"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Bottom-Left Floating Guild Certification Card -->
+                        <div class="floating-card-left absolute -bottom-6 -left-2 sm:-left-6 bg-white dark:bg-[#171412] p-4 rounded-2xl shadow-xl border border-[#E5DEC9] dark:border-[#2B2622] surface-card max-w-[250px]">
+                            <div class="flex items-center justify-between gap-3 mb-1.5">
+                                <span class="px-2.5 py-0.5 rounded-full bg-[#EFE9E0] dark:bg-[#28231F] text-[#9A5B36] dark:text-[#D99B66] text-[10px] font-bold uppercase">
+                                    Guild Certified
+                                </span>
+                                <span class="text-xs font-bold text-[#9A5B36] dark:text-[#D99B66]">10-Yr Warranty</span>
+                            </div>
+                            <h4 class="text-sm font-bold text-[#231A15] leading-tight">Signed & Numbered Editions</h4>
+                            <p class="text-[11px] text-[#5A493E] muted-text mt-1">Every piece is stamped by the master artisan who built it.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 1: OUR MISSION & VISION (DUAL ARCHITECTURAL CARDS) ========== -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#9A5B36] dark:text-[#D99B66] block mb-2">Purpose & Direction</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#231A15]">Guided By Craft, Rooted In Permanence</h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div class="bg-white dark:bg-[#171412] rounded-3xl p-6 sm:p-8 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between shadow-sm">
+                <div>
+                    <div class="relative h-56 rounded-2xl overflow-hidden mb-6">
+                        <img src="images/furniture (20).jpg" alt="Our Mission Workshop" class="w-full h-full object-cover hero-zoom">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#9A5B36] text-white text-xs font-bold uppercase tracking-wider">01 • Our Mission</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-[#231A15] mb-3">To Replace Disposable Decor With Generational Heirlooms</h3>
+                    <p class="text-sm sm:text-base text-[#5A493E] muted-text leading-relaxed">
+                        We exist to slow down the furniture industry. Every table, sofa, and luminaire we create is engineered from kiln-dried solid hardwoods, traditional mortise-and-tenon joinery, and zero-VOC organic oils so your home feels grounded, healthy, and timeless.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-[#EFE9E0] dark:border-[#28231F] flex items-center justify-between text-xs font-semibold text-[#9A5B36] dark:text-[#D99B66]">
+                    <span><i class="fas fa-check-circle mr-1.5"></i> 100% Solid FSC-Certified Timber</span>
+                    <span><i class="fas fa-check-circle mr-1.5"></i> Zero Particleboard</span>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-[#171412] rounded-3xl p-6 sm:p-8 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between shadow-sm">
+                <div>
+                    <div class="relative h-56 rounded-2xl overflow-hidden mb-6">
+                        <img src="images/furniture (21).jpg" alt="Our Vision Sanctuary" class="w-full h-full object-cover hero-zoom">
+                        <span class="absolute top-4 left-4 px-3.5 py-1.5 rounded-full bg-[#231A15] text-white text-xs font-bold uppercase tracking-wider">02 • Our Vision</span>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-[#231A15] mb-3">To Pioneer Climate-Positive Architectural Living Worldwide</h3>
+                    <p class="text-sm sm:text-base text-[#5A493E] muted-text leading-relaxed">
+                        We envision a future where luxury interiors actively regenerate forests and preserve endangered woodworking guilds. By 2030, every FurniCraft showroom will operate on carbon-neutral energy while funding apprenticeship ateliers for next-generation artisans.
+                    </p>
+                </div>
+                <div class="mt-6 pt-4 border-t border-[#EFE9E0] dark:border-[#28231F] flex items-center justify-between text-xs font-semibold text-[#9A5B36] dark:text-[#D99B66]">
+                    <span><i class="fas fa-seedling mr-1.5"></i> 3 Trees Replanted Per Piece</span>
+                    <span><i class="fas fa-recycle mr-1.5"></i> Lifetime Refinishing Program</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: OUR HISTORY (CLEAN, UNIFORM, NON-JIGGERED 4-COLUMN GRID) ========== -->
+    <section class="py-16 lg:py-24 bg-[#EFE9E0]/70 dark:bg-[#12100E] border-y border-[#DFD5C7] dark:border-[#26221E]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#9A5B36] dark:text-[#D99B66] block mb-2">Our History & Evolution</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#231A15]">Sixteen Years Of Architectural Woodwork</h2>
+                </div>
+                <p class="text-xs sm:text-sm text-[#5A493E] muted-text max-w-md">A steady, deliberate journey from a two-bench timber barn to an internationally recognized furniture and home decor studio.</p>
+            </div>
+            <!-- Strictly Aligned Symmetrical 4-Column Timeline Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-5 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 rounded-full bg-[#9A5B36] text-white font-serif font-bold text-sm">2010</span>
+                            <span class="text-xs font-mono text-[#5A493E] muted-text">Chapter 01</span>
+                        </div>
+                        <img src="images/furniture (24).jpg" alt="2010 Timber Barn" class="w-full h-40 rounded-2xl object-cover mb-4">
+                        <h3 class="font-serif text-lg font-bold text-[#231A15]">The Timber Barn</h3>
+                        <p class="text-xs text-[#5A493E] muted-text mt-2 leading-relaxed">Founded by master joiner Julian Vance in a 1,200 sq. ft. studio, hand-planing reclaimed oak dining tables for local families.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-[11px] font-semibold text-[#9A5B36] dark:text-[#D99B66] block">3 Founding Cabinetmakers</span>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-5 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 rounded-full bg-[#9A5B36] text-white font-serif font-bold text-sm">2015</span>
+                            <span class="text-xs font-mono text-[#5A493E] muted-text">Chapter 02</span>
+                        </div>
+                        <img src="images/furniture (22).jpg" alt="2015 Upholstery Atelier" class="w-full h-40 rounded-2xl object-cover mb-4">
+                        <h3 class="font-serif text-lg font-bold text-[#231A15]">Upholstery & Textile Guild</h3>
+                        <p class="text-xs text-[#5A493E] muted-text mt-2 leading-relaxed">Expanded into bespoke bouclé sectionals and Belgian linen lounge seating, partnering directly with European family mills.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-[11px] font-semibold text-[#9A5B36] dark:text-[#D99B66] block">FSC-Certified Supply Chain</span>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-5 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 rounded-full bg-[#9A5B36] text-white font-serif font-bold text-sm">2020</span>
+                            <span class="text-xs font-mono text-[#5A493E] muted-text">Chapter 03</span>
+                        </div>
+                        <img src="images/furniture (35).jpg" alt="2020 Flagship Showroom" class="w-full h-40 rounded-2xl object-cover mb-4">
+                        <h3 class="font-serif text-lg font-bold text-[#231A15]">Flagship Design District</h3>
+                        <p class="text-xs text-[#5A493E] muted-text mt-2 leading-relaxed">Opened our 18,000 sq. ft. architectural showroom featuring 14 full-scale room sanctuaries and an in-house 3D spatial studio.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-[11px] font-semibold text-[#9A5B36] dark:text-[#D99B66] block">18,000 Sq. Ft. Gallery</span>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-5 border border-[#E5DEC9] dark:border-[#2B2622] surface-card flex flex-col justify-between h-full">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3.5 py-1 rounded-full bg-[#231A15] dark:bg-[#D99B66] text-white dark:text-[#14110F] font-serif font-bold text-sm">2026</span>
+                            <span class="text-xs font-mono text-[#5A493E] muted-text">Chapter 04</span>
+                        </div>
+                        <img src="images/furniture (37).jpg" alt="2026 Artisanal Decor" class="w-full h-40 rounded-2xl object-cover mb-4">
+                        <h3 class="font-serif text-lg font-bold text-[#231A15]">Bespoke Decor & Lighting</h3>
+                        <p class="text-xs text-[#5A493E] muted-text mt-2 leading-relaxed">Launched our sculptural ceramic lighting, travertine plinths, and nationwide white-glove placement across 40+ cities.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-[11px] font-semibold text-[#9A5B36] dark:text-[#D99B66] block">38 Master Guild Artisans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: RAW MATERIAL PROVENANCE & HONESTY ========== -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#9A5B36] dark:text-[#D99B66] block mb-2">Material Provenance</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#231A15]">Traceable Elements From Forest To Living Room</h2>
+            <p class="text-sm sm:text-base text-[#5A493E] muted-text mt-2">We source only raw materials that develop a richer patina with every passing decade.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+            <div class="bg-white dark:bg-[#171412] rounded-3xl overflow-hidden border border-[#E5DEC9] dark:border-[#2B2622] surface-card shadow-sm flex flex-col">
+                <img src="images/furniture (25).jpg" alt="Kiln Dried Teak & Walnut" class="w-full h-52 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Timber • North America & Burma</span>
+                        <h3 class="font-serif text-xl font-bold text-[#231A15] mt-1">Kiln-Dried Teak & Black Walnut</h3>
+                        <p class="text-xs sm:text-sm text-[#5A493E] muted-text mt-2 leading-relaxed">Seasoned for 18 months to 8% moisture content to prevent warping, then hand-rubbed with pure cold-pressed linseed oil and beeswax.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-xs font-semibold text-[#231A15] nav-text">100% Solid Heartwood</span>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-[#171412] rounded-3xl overflow-hidden border border-[#E5DEC9] dark:border-[#2B2622] surface-card shadow-sm flex flex-col">
+                <img src="images/furniture (19).jpg" alt="Belgian Linen & Boucle" class="w-full h-52 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Textiles • Flanders, Belgium</span>
+                        <h3 class="font-serif text-xl font-bold text-[#231A15] mt-1">OEKO-TEX® Bouclé & Raw Flax Linen</h3>
+                        <p class="text-xs sm:text-sm text-[#5A493E] muted-text mt-2 leading-relaxed">Woven in small batches without chemical fire retardants or PFAS coatings, offering 100,000+ double-rub durability for family living.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-xs font-semibold text-[#231A15] nav-text">80+ Custom Weaves Available</span>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-[#171412] rounded-3xl overflow-hidden border border-[#E5DEC9] dark:border-[#2B2622] surface-card shadow-sm flex flex-col">
+                <img src="images/furniture (17).jpg" alt="Honed Travertine & Brass" class="w-full h-52 object-cover">
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Mineral & Metal • Tivoli, Italy</span>
+                        <h3 class="font-serif text-xl font-bold text-[#231A15] mt-1">Honed Roman Travertine & Sand-Cast Brass</h3>
+                        <p class="text-xs sm:text-sm text-[#5A493E] muted-text mt-2 leading-relaxed">Porous architectural stone slabs paired with unlacquered solid brass hardware that naturally mellows to a warm antique gold.</p>
+                    </div>
+                    <span class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] text-xs font-semibold text-[#231A15] nav-text">Hand-Selected Quarry Blocks</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 4: MEET THE MASTER ARTISANS & ARCHITECTS ========== -->
+    <section class="py-16 lg:py-24 bg-[#EBE4DA]/60 dark:bg-[#141210] border-t border-[#DFD5C7] dark:border-[#26221E]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 text-center md:text-left gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#9A5B36] dark:text-[#D99B66] block mb-2">The Guild Leadership</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#231A15]">The Hands Behind Every Silhouette</h2>
+                </div>
+                <a href="Book Appointment.html" class="px-6 py-3 rounded-2xl bg-[#9A5B36] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#7A4526] transition btn-primary-dark">
+                    Book Consultation With Our Team
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-4 border border-[#E5DEC9] dark:border-[#2B2622] surface-card text-center">
+                    <img src="images/about4.jpg" alt="Julian Vance" class="w-full h-64 rounded-2xl object-cover mb-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Founder & Master Joiner</span>
+                    <h3 class="font-serif text-lg font-bold text-[#231A15] mt-0.5">Julian Vance</h3>
+                    <p class="text-xs text-[#5A493E] muted-text mt-1">24 years in architectural cabinetmaking and Japanese mortise joinery.</p>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-4 border border-[#E5DEC9] dark:border-[#2B2622] surface-card text-center">
+                    <img src="images/about3.jpg" alt="Soraia Lindqvist" class="w-full h-64 rounded-2xl object-cover mb-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Director of Spatial Design</span>
+                    <h3 class="font-serif text-lg font-bold text-[#231A15] mt-0.5">Soraia Lindqvist</h3>
+                    <p class="text-xs text-[#5A493E] muted-text mt-1">Former Copenhagen interior architect leading our 3D room styling studio.</p>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-4 border border-[#E5DEC9] dark:border-[#2B2622] surface-card text-center">
+                    <img src="images/about6.jpg" alt="Matteo Bellini" class="w-full h-64 rounded-2xl object-cover mb-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Head of Upholstery</span>
+                    <h3 class="font-serif text-lg font-bold text-[#231A15] mt-0.5">Matteo Bellini</h3>
+                    <p class="text-xs text-[#5A493E] muted-text mt-1">Third-generation Milanese upholsterer specializing in saddle leather and bouclé.</p>
+                </div>
+                <div class="bg-white dark:bg-[#171412] rounded-3xl p-4 border border-[#E5DEC9] dark:border-[#2B2622] surface-card text-center">
+                    <img src="images/about5.jpg" alt="Amara Okafor" class="w-full h-64 rounded-2xl object-cover mb-4">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-[#9A5B36] dark:text-[#D99B66]">Curator of Objects & Light</span>
+                    <h3 class="font-serif text-lg font-bold text-[#231A15] mt-0.5">Amara Okafor</h3>
+                    <p class="text-xs text-[#5A493E] muted-text mt-1">Sculptural ceramicist curating our hand-thrown vessels and brass lighting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5: INSIDE OUR 18,000 SQ. FT. FLAGSHIP ATELIER ========== -->
+    <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#9A5B36] dark:text-[#D99B66] block mb-2">The Showroom Experience</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#231A15]">Designed Like A Home, Not A Warehouse</h2>
+            </div>
+            <a href="booking.html" class="inline-flex items-center gap-2 text-sm font-semibold text-[#9A5B36] dark:text-[#D99B66] hover:underline">
+                <span>Schedule A Guided Walkthrough</span> <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-7 relative rounded-3xl overflow-hidden h-80 sm:h-96 shadow-lg border border-[#E5DEC9] dark:border-[#2B2622]">
+                <img src="images/furniture (28).jpg" alt="Main Showroom Atrium" class="w-full h-full object-cover hero-zoom">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <span class="text-xs uppercase tracking-widest text-[#E5C19B]">Zone 01 • Natural Daylight Atrium</span>
+                    <h3 class="font-serif text-2xl font-bold mt-1">14 Full-Scale Living & Dining Vignettes</h3>
+                    <p class="text-xs text-gray-200 mt-1">Test sofa depths, dining table legroom, and lighting warmth under natural skylights.</p>
+                </div>
+            </div>
+            <div class="md:col-span-5 flex flex-col gap-6">
+                <div class="relative rounded-3xl overflow-hidden h-44 shadow-lg border border-[#E5DEC9] dark:border-[#2B2622]">
+                    <img src="images/furniture (15).jpg" alt="Tactile Swatch Bar" class="w-full h-full object-cover hero-zoom">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-5 right-5 text-white">
+                        <span class="text-[10px] uppercase tracking-widest text-[#E5C19B]">Zone 02 • Tactile Library</span>
+                        <h4 class="font-serif text-lg font-bold">Complimentary Timber & Textile Swatch Bar</h4>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden h-44 shadow-lg border border-[#E5DEC9] dark:border-[#2B2622]">
+                    <img src="images/furniture (31).jpg" alt="Viewing Window Workshop" class="w-full h-full object-cover hero-zoom">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-5 right-5 text-white">
+                        <span class="text-[10px] uppercase tracking-widest text-[#E5C19B]">Zone 03 • Espresso & Blueprint Lounge</span>
+                        <h4 class="font-serif text-lg font-bold">Private 3D Floorplan & Finishes Studio</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 6: GUILD RECOGNITION & TRADE PARTNER INVITATION ========== -->
+    <section class="py-12 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-[#231A15] dark:bg-[#171412] rounded-3xl p-8 sm:p-12 border border-[#3A2E27] shadow-2xl text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+                    <span class="px-3.5 py-1 rounded-full bg-[#9A5B36] text-xs font-bold uppercase tracking-widest">Trade & Bespoke Commissions</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white leading-tight">
+                        Partner With Our Guild For Residential & Hospitality Projects
+                    </h2>
+                    <p class="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        We collaborate with interior designers, architects, and discerning homeowners to craft custom-dimensioned tables, COM upholstery, and commercial-grade heirloom pieces.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-3 pt-2">
+                        <a href="Book Appointment.html" class="px-7 py-3.5 rounded-2xl bg-[#D99B66] text-[#14110F] font-bold text-xs sm:text-sm hover:bg-white transition">
+                            Book Private Showroom Visit
+                        </a>
+                        <a href="contact.html" class="px-7 py-3.5 rounded-2xl border border-white/30 text-white font-semibold text-xs sm:text-sm hover:bg-white/10 transition">
+                            Apply For Trade Account
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                        <i class="fas fa-medal text-2xl text-[#D99B66] mb-2"></i>
+                        <h4 class="font-serif font-bold text-sm text-white">AD100 Artisans</h4>
+                        <p class="text-[11px] text-gray-300 mt-1">Featured in Architectural Digest 2024–2026</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                        <i class="fas fa-leaf text-2xl text-[#D99B66] mb-2"></i>
+                        <h4 class="font-serif font-bold text-sm text-white">FSC® 100% Guild</h4>
+                        <p class="text-[11px] text-gray-300 mt-1">Verified Sustainable Forestry Stewardship</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                        <i class="fas fa-Drafting-compass fa-compass-drafting text-2xl text-[#D99B66] mb-2"></i>
+                        <h4 class="font-serif font-bold text-sm text-white">20% Trade Tier</h4>
+                        <p class="text-[11px] text-gray-300 mt-1">Dedicated pricing & CAD blocks for designers</p>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white/5 border border-white/10 text-center">
+                        <i class="fas fa-shield-heart text-2xl text-[#D99B66] mb-2"></i>
+                        <h4 class="font-serif font-bold text-sm text-white">10-Yr Warranty</h4>
+                        <p class="text-[11px] text-gray-300 mt-1">Structural joinery & timber guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== UNIQUE ARCHITECTURAL SHOWROOM FOOTER ========== -->
+    <footer class="bg-[#EFE9E0] border-t border-[#DFD5C7] pt-14 pb-8 footer-dark mt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Top Pre-Footer Lookbook & Showroom Banner Card -->
+            <div class="bg-[#231A15] dark:bg-[#1A1715] rounded-3xl p-6 sm:p-10 mb-14 border border-[#3A2E27] shadow-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <div class="lg:col-span-7 text-center lg:text-left">
+                        <span class="text-xs uppercase tracking-[0.2em] text-[#D99B66] font-semibold block mb-2">
+                            The 2026 Interior Lookbook
+                        </span>
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">
+                            Get Curated Room Inspiration & Private Sale Access
+                        </h3>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <form onsubmit="event.preventDefault();" class="flex flex-col sm:flex-row gap-2.5">
+                            <input type="email" placeholder="Enter your email address..." class="px-4 py-3.5 rounded-2xl bg-white/10 border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:border-[#D99B66] text-sm flex-1 newsletter-input">
+                            <button type="submit" class="px-6 py-3.5 rounded-2xl bg-[#9A5B36] hover:bg-[#D99B66] hover:text-[#14110F] text-white font-semibold text-sm transition whitespace-nowrap">
+                                Join List
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main 12-Column Asymmetric Footer Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 pb-12 border-b border-[#D8CDBE] dark:border-[#26221E]">
+
+                <!-- Col 1-4: Brand Identity & Socials -->
+                <div class="lg:col-span-4 text-center sm:text-left space-y-4">
+                    <a href="index.html" class="logo-area inline-flex items-center gap-3 group">
+                        <div class="w-10 h-10 rounded-xl bg-[#9A5B36] text-white flex items-center justify-center">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-[#231A15] dark:text-[#F8F5F0]">
+                            FurniCraft
+                        </span>
+                    </a>
+                    <p class="text-[#5A493E] text-sm leading-relaxed muted-text max-w-sm mx-auto sm:mx-0">
+                        Bespoke furniture showroom and artisanal home decor studio. We partner with master woodworkers to craft sustainable heirloom pieces for modern living.
+                    </p>
+                    <div class="flex justify-center sm:justify-start gap-2.5 pt-1">
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white dark:bg-[#1A1715] border border-[#DFD5C7] dark:border-[#2E2925] flex items-center justify-center text-[#9A5B36] hover:bg-[#9A5B36] hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white dark:bg-[#1A1715] border border-[#DFD5C7] dark:border-[#2E2925] flex items-center justify-center text-[#9A5B36] hover:bg-[#9A5B36] hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white dark:bg-[#1A1715] border border-[#DFD5C7] dark:border-[#2E2925] flex items-center justify-center text-[#9A5B36] hover:bg-[#9A5B36] hover:text-white transition"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-xl bg-white dark:bg-[#1A1715] border border-[#DFD5C7] dark:border-[#2E2925] flex items-center justify-center text-[#9A5B36] hover:bg-[#9A5B36] hover:text-white transition"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 5-6: Showroom Navigation -->
+                <div class="lg:col-span-2 text-center sm:text-left">
+                    <h4 class="text-[#231A15] font-bold text-sm uppercase tracking-wider mb-4 footer-heading">Collections</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="index.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Home</a></li>
+                        <li><a href="service.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Living Room</a></li>
+                        <li><a href="service.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Dining & Tables</a></li>
+                        <li><a href="pricing.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Custom Pricing</a></li>
+                        <li><a href="blog.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Interior Journal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 7-8: Client Care -->
+                <div class="lg:col-span-2 text-center sm:text-left">
+                    <h4 class="text-[#231A15] font-bold text-sm uppercase tracking-wider mb-4 footer-heading">Client Care</h4>
+                    <ul class="space-y-2.5">
+                        <li><a href="about.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Our Craftsmanship</a></li>
+                        <li><a href="booking.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Design Consultation</a></li>
+                        <li><a href="faq.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Delivery & Care FAQ</a></li>
+                        <li><a href="contact.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Contact Studio</a></li>
+                        <li><a href="Book Appointment.html" class="text-[#5A493E] hover:text-[#9A5B36] transition text-sm footer-link">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 9-12: Flagship Showroom Card -->
+                <div class="lg:col-span-4">
+                    <div class="bg-white dark:bg-[#171412] p-5 rounded-2xl border border-[#DFD5C7] dark:border-[#2B2622] surface-card text-center sm:text-left">
+                        <div class="flex items-center justify-center sm:justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#9A5B36] dark:text-[#D99B66]">Flagship Showroom</span>
+                            <span class="hidden sm:inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 dark:text-emerald-400">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Open Today
+                            </span>
+                        </div>
+                        <p class="text-sm font-semibold text-[#231A15]">420 Artisan Design District, Suite 100</p>
+                        <p class="text-xs text-[#5A493E] muted-text mt-1">Mon – Sun: 10:00 AM – 8:30 PM</p>
+                        <div class="mt-4 pt-3 border-t border-[#EFE9E0] dark:border-[#28231F] flex flex-col sm:flex-row items-center justify-between gap-2">
+                            <span class="text-xs font-medium text-[#5A493E] muted-text"><i class="fas fa-phone-volume mr-1 text-[#9A5B36]"></i> +1 (555) 234-8900</span>
+                            <a href="Book Appointment.html" class="text-xs font-bold text-[#9A5B36] dark:text-[#D99B66] hover:underline">
+                                Book Private Visit →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright & Legal Bar -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#5A493E] muted-text">
+                <p>© 2026 FurniCraft — Furniture Showroom & Home Decor Store. All rights reserved.</p>
+                <div class="flex items-center gap-5">
+                    <a href="#" class="hover:text-[#9A5B36] transition footer-link">Privacy Policy</a>
+                    <a href="#" class="hover:text-[#9A5B36] transition footer-link">Terms of Service</a>
+                    <a href="faq.html" class="hover:text-[#9A5B36] transition footer-link">Trade Program</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LOGIC ========== -->
+    <script>
+        (function () {
+            const html = document.documentElement;
+            const darkToggle = document.getElementById('darkModeToggle');
+            const darkIcon = document.getElementById('darkIcon');
+            const darkLabel = document.getElementById('darkLabel');
+            const drawerDarkToggle = document.getElementById('drawerDarkToggle');
+            const drawerDarkIcon = document.getElementById('drawerDarkIcon');
+            const drawerDarkLabel = document.getElementById('drawerDarkLabel');
+
+            function updateDarkUI(isDark) {
+                const iconClass = isDark ? 'fas fa-sun text-xs text-[#D99B66]' : 'fas fa-moon text-xs text-[#9A5B36]';
+                const label = isDark ? 'Light' : 'Dark';
+                if (darkIcon) darkIcon.className = iconClass;
+                if (darkLabel) darkLabel.innerText = label;
+                if (drawerDarkIcon) drawerDarkIcon.className = iconClass;
+                if (drawerDarkLabel) drawerDarkLabel.innerText = label;
+            }
+            if (localStorage.getItem('inkwhisper_dark') === 'enabled') {
+                html.classList.add('dark');
+                updateDarkUI(true);
+            } else {
+                updateDarkUI(false);
+            }
+            function toggleDark() {
+                if (html.classList.contains('dark')) {
+                    html.classList.remove('dark');
+                    localStorage.setItem('inkwhisper_dark', 'disabled');
+                    updateDarkUI(false);
+                } else {
+                    html.classList.add('dark');
+                    localStorage.setItem('inkwhisper_dark', 'enabled');
+                    updateDarkUI(true);
+                }
+            }
+            if (darkToggle) darkToggle.addEventListener('click', toggleDark);
+            if (drawerDarkToggle) drawerDarkToggle.addEventListener('click', toggleDark);
+
+            const rtlBtn = document.getElementById('rtlToggle');
+            const rtlLabelSpan = document.getElementById('rtlLabel');
+            const drawerRtlBtn = document.getElementById('drawerRtlToggle');
+            const drawerRtlLabel = document.getElementById('drawerRtlLabel');
+
+            function setDirection(dir) {
+                html.setAttribute('dir', dir);
+                localStorage.setItem('inkwhisper_dir', dir);
+                const label = dir === 'rtl' ? 'RTL' : 'LTR';
+                if (rtlLabelSpan) rtlLabelSpan.innerText = label;
+                if (drawerRtlLabel) drawerRtlLabel.innerText = label;
+                document.body.style.display = 'none';
+                document.body.offsetHeight;
+                document.body.style.display = '';
+            }
+            const savedDir = localStorage.getItem('inkwhisper_dir');
+            setDirection(savedDir === 'rtl' ? 'rtl' : 'ltr');
+            function toggleRTL() {
+                setDirection(html.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl');
+            }
+            if (rtlBtn) rtlBtn.addEventListener('click', toggleRTL);
+            if (drawerRtlBtn) drawerRtlBtn.addEventListener('click', toggleRTL);
+
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const drawer = document.getElementById('mobileDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+            const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+            const body = document.body;
+
+            function openDrawer() {
+                drawer.classList.add('open');
+                overlay.classList.add('open');
+                body.classList.add('drawer-open');
+            }
+            function closeDrawer() {
+                drawer.classList.remove('open');
+                overlay.classList.remove('open');
+                body.classList.remove('drawer-open');
+            }
+            if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+            if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+            if (overlay) overlay.addEventListener('click', closeDrawer);
+
+            const drawerHomeBtn = document.getElementById('drawerHomeBtn');
+            const drawerSubmenu = document.getElementById('drawerSubmenu');
+            const drawerChevron = document.getElementById('drawerChevron');
+            if (drawerHomeBtn && drawerSubmenu) {
+                drawerHomeBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const hidden = drawerSubmenu.classList.contains('hidden');
+                    if (hidden) {
+                        drawerSubmenu.classList.remove('hidden');
+                        if (drawerChevron) drawerChevron.style.transform = 'rotate(180deg)';
+                    } else {
+                        drawerSubmenu.classList.add('hidden');
+                        if (drawerChevron) drawerChevron.style.transform = 'rotate(0deg)';
+                    }
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 1280 && drawer.classList.contains('open')) {
+                    closeDrawer();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
